@@ -3,7 +3,7 @@ import GalleryList from '../components/GalleryList';
 
 const App = () => {
   return (
-    <div className=" bg-[#404040] ">
+    <div className=" bg-[#fafafa] ">
       <GalleryList />
     </div>
   );

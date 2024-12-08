@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 
 const Login = () => {
@@ -28,10 +28,10 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('img/wallpaperflare.com_wallpaper.jpg')" }}>
+    <div className="flex items-center justify-center min-h-screen bg-[#1d4ed8] bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://i.ibb.co.com/1fJpFhJ/Whats-App-Image-2024-12-08-at-10-26-07-PM.jpg')" }}>
       <div
-        className="bg-white p-8 rounded-lg shadow-md w-96 bg-cover bg-center"
-        style={{ backgroundImage: "url('https://i.pinimg.com/736x/04/48/6e/04486e81a5a2692e8f0b65a9a4b6db73.jpg')" }}
+        className="bg-[#000000] p-8 rounded-lg shadow-md w-96 bg-cover bg-center"
+        // style={{ backgroundImage: "url('https://i.pinimg.com/736x/04/48/6e/04486e81a5a2692e8f0b65a9a4b6db73.jpg')" }}
       >
         <h2 className="text-2xl font-bold mb-6 text-center text-white">Login</h2>
         {error && <div className="text-red-500 mb-4">{error}</div>}
@@ -41,7 +41,7 @@ const Login = () => {
             <button
               type="button"
               onClick={() => setIsAdmin(!isAdmin)}
-              className="text-blue-300 hover:text-blue-100 focus:outline-none"
+              className="text-[#c2410c] hover:text-[#c2410c] focus:outline-none"
             >
               {isAdmin ? 'User' : 'Admin'}
             </button>
@@ -83,11 +83,17 @@ const Login = () => {
           )}
           <button
             type="submit"
-            className="bg-blue-500 text-white py-2 rounded w-full hover:bg-blue-600"
+            className="bg-[#c2410c] text-white py-2 rounded w-full hover:bg-[#c2410c]"
           >
             Login as {isAdmin ? 'Admin' : 'User'}
           </button>
         </form>
+        <p className="text-white text-center mt-4">
+          Don't have an account?{' '}
+          <Link to="/register" className="text-[#c2410c] hover:underline">
+            Sign up
+          </Link>
+        </p>
       </div>
     </div>
   );

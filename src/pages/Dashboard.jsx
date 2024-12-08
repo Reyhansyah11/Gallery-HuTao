@@ -198,7 +198,7 @@ const Dashboard = () => {
         </div>
         <button
           type="submit"
-          className="bg-blue-500 text-white py-2 rounded w-full hover:bg-blue-600"
+          className="bg-[#c2410c] text-white py-2 rounded w-full hover:bg-orange-600"
         >
           {editId ? "Perbarui Galeri" : "Tambahkan Galeri"}
         </button>
@@ -253,7 +253,7 @@ const Dashboard = () => {
           <button
             key={index}
             onClick={() => handlePageChange(index + 1)}
-            className={`mx-1 px-3 py-1 border rounded ${currentPage === index + 1 ? "bg-blue-500 text-white" : "bg-white text-blue-500"}`}
+            className={`mx-1 px-3 py-1 border rounded ${currentPage === index + 1 ? "bg-[#c2410c] text-white" : "bg-white text-[#c2410c]"}`}
           >
             {index + 1}
           </button>
